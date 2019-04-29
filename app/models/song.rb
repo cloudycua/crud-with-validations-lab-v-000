@@ -3,5 +3,5 @@ class Song < ActiveRecord::Base
   validates :title, uniqueness: {
     scope: %i[release_year artist_name]
   }
-  validates :released, inclusion { in: [true, false] }
+  validates :released, inclusion { in: %w(true false) }
 end
