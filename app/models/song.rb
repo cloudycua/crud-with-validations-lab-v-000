@@ -11,4 +11,8 @@ class Song < ActiveRecord::Base
     }
   end
 
+  def released?
+    released
+  end
+
 end
