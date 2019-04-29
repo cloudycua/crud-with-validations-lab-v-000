@@ -10,6 +10,7 @@ class Song < ActiveRecord::Base
       less_than_or_equal_to: Date.today.year
     }
     validates :released, inclusion: { in: [true, false] }
+    validates :artist_name, presence: true
   end
 
   def released?
